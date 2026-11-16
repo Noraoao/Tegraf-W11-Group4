@@ -43,6 +43,8 @@ class Dinic:
         return 0
 
     def max_flow(self, s, t):
+        if s == t:
+            return 0
         flow = 0
         while self._bfs(s, t):
             self.it = [0] * self.n
